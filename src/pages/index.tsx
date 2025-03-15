@@ -1,10 +1,10 @@
 // pages/index.tsx
 import BuildingForm from '../../components/BuildingForm';
 import { useState, useEffect } from 'react';
-import prisma from '../../lib/prisma';
+//import prisma from '../../lib/prisma';
 
 export default function Home() {
-  const [buildings, setBuildings] = useState<any[]>([]);
+  const [buildings, setBuildings] = useState<{ id: number; name: string }[]>([]);
 
   // Fetch buildings on component mount
   useEffect(() => {
